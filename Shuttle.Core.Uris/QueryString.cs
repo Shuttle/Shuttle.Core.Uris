@@ -51,5 +51,18 @@ namespace Shuttle.Core.Uris
         {
             base.Add(key, value);
         }
+
+        public new string this[string key]
+        {
+            get
+            {
+                if (!ContainsKey(key))
+                {
+                    return null;
+                }
+
+                return base[key];
+            }
+        }
     }
 }

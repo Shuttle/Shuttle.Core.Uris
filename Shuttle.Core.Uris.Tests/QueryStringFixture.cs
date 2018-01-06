@@ -35,5 +35,15 @@ namespace Shuttle.Core.Uris.Tests
 
             Assert.That(qs.Count, Is.EqualTo(0));
         }
+
+        [Test]
+        public void Should_return_an_empty_string_when_key_not_found()
+        {
+            var uri = new Uri("the-scheme://the-host");
+
+            var qs = new QueryString(uri);
+
+            Assert.That(qs["not-here"], Is.Null);
+        }
     }
 }
