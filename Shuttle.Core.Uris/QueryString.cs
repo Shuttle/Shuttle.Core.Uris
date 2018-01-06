@@ -19,7 +19,14 @@ namespace Shuttle.Core.Uris
         {
             Guard.AgainstNull(uri, nameof(uri));
 
-            var result = uri.Query.Replace("?", "").Split('&').Select(q => q.Split('='))
+            var value = (uri.Query??string.Empty).Replace("?", "");
+
+            if (string.IsNullOrEmpty(value))
+            {
+                return;
+            }
+
+            var result = value.Split('&').Select(q => q.Split('='))
                 .ToDictionary(k => k[0], v => v[1]);
 
             foreach (var pair in result)

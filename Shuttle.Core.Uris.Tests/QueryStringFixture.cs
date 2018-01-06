@@ -25,5 +25,15 @@ namespace Shuttle.Core.Uris.Tests
             Assert.That(qs["key1"], Is.EqualTo("value1"));
             Assert.That(qs["key2"], Is.EqualTo("value2"));
         }
+
+        [Test]
+        public void Should_be_able_to_handle_an_empty_query_string()
+        {
+            var uri = new Uri("the-scheme://the-host");
+
+            var qs = new QueryString(uri);
+
+            Assert.That(qs.Count, Is.EqualTo(0));
+        }
     }
 }
