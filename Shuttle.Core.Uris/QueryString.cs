@@ -38,6 +38,7 @@ namespace Shuttle.Core.Uris
                 else
                 {
                     AddUnescaped(pair.Key, pair.Value);
+                    AddUnescaped(pair.Key, pair.Value);
                 }
             }
         }
@@ -56,12 +57,8 @@ namespace Shuttle.Core.Uris
         {
             get
             {
-                if (!ContainsKey(key))
-                {
-                    return null;
-                }
-
-                return base[key];
+                TryGetValue(key, out var result);
+                return result;
             }
         }
     }
