@@ -38,7 +38,6 @@ namespace Shuttle.Core.Uris
                 else
                 {
                     AddUnescaped(pair.Key, pair.Value);
-                    AddUnescaped(pair.Key, pair.Value);
                 }
             }
         }
