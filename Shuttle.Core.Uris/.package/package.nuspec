@@ -3,16 +3,17 @@
 <package>
 	<metadata>
 		<id>Shuttle.Core.Uris</id>
-		<version>10.0.5</version>
+		<version>10.0.6</version>
 		<authors>Eben Roux</authors>
 		<owners>Eben Roux</owners>
 		<license type="expression">BSD-3-Clause</license>
 		<requireLicenseAcceptance>false</requireLicenseAcceptance>
 		<icon>images\logo.png</icon>
+		<readme>docs\README.md</readme>
 		<repository type="git" url="https://github.com/shuttle/Shuttle.Core.Uris.git" />
 		<projectUrl>https://github.com/shuttle/Shuttle.Core.Uris</projectUrl>
 		<description>Uri infrastructure utilities.</description>
-		<copyright>Copyright (c) 2020, Eben Roux</copyright>
+		<copyright>Copyright (c) 2022, Eben Roux</copyright>
 		<tags>shuttle</tags>
 		<dependencies>
       <dependency id="Shuttle.Core.Contract" version="10.0.3" />
@@ -20,6 +21,7 @@
 	</metadata>
 	<files>
 		<file src="..\..\..\.media\logo.png" target="images" />
+		<file src="..\..\..\README.md" target="docs\" />
 		<file src="lib\**\*.*" target="lib" />
 	</files>
 </package>
